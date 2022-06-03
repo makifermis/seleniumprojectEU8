@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class AmazonTask {
@@ -75,6 +76,12 @@ public class AmazonTask {
        Assert.assertEquals(priceOfOne,priceOfQuantityDecreased);
 
 
+   }
+
+   @AfterMethod
+    public void tearDown() {
+       BrowserUtils.sleep(3);
+       driver.close();
    }
 
 
