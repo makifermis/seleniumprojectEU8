@@ -26,11 +26,11 @@ public class AlertTask {
 
         //• Navigate to "Laptop" : call the utility method
 
-        ReviewUtils.getLink(driver, "Laptops");
+        ReviewUtils.getLink("Laptops");
 
-        ReviewUtils.getLink(driver, "Sony vaio i5");
+        ReviewUtils.getLink("Sony vaio i5");
 
-        ReviewUtils.getLink(driver, "Add to cart");
+        ReviewUtils.getLink("Add to cart");
 
         // After this step I should see the ALERT
         Alert alert = driver.switchTo().alert();
